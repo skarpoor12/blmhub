@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="eng">
+<head>
+	<link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}"/>
+  	<meta charset="utf-8" />
+  	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<title>Resources</title>
+</head>
+<body>
+	<div style="padding-bottom: 6em">
+  	<nav id="nav">
+        <ul style="text-align: center; ">
+          <li><a class="button1 not-active" href="index.html"><span>HOME</span></a></li>
+          <li><a class="current" href="resources.html"><span>RESOURCES</span></a></li>
+          <li><a class="button1 not-active" href="index.html"><span>LEARN</span></a></li>
+          <li><a class="button1 not-active" href="index.html"><span>NEWS</span></a></li>
+          <li><a class="button1 not-active" href="index.html"><span>VOLUNTEER</span></a></li>
+        </ul>
+    </nav>
+  </div>
+
+  {% for table in tables %}
+            {{ table|safe }}
+  {% endfor %}
+
+
+  <div>
+  	<p style="text-align: center">Made Interactive with HTML5UP</p>
+  </div>
+</body>
+</html>
+

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="eng">
+<head>
+	<link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}"/>
+  	<meta charset="utf-8" />
+  	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<title>Volunteer</title>
+</head>
+<body>
+	<div style="padding-bottom: 6em">
+  	<nav id="nav">
+        <ul style="text-align: center; ">
+          <li><a class="button1 not-active" href="{{ url_for('home') }}"><span>HOME</span></a></li>
+          <li><a class="button1 not-active" href="{{ url_for('resources') }}"><span>RESOURCES</span></a></li>
+          <li><a class="button1 not-active" href="index.html"><span>LEARN</span></a></li>
+          <li><a class="button1 not-active" href="index.html"><span>NEWS</span></a></li>
+          <li><a class="current" href="{{ url_for('volunteer') }}"><span>VOLUNTEER</span></a></li>
+        </ul>
+    </nav>
+  </div>
+  <div>
+    <div class="container">
+            <div class="row aln-center">
+              <div class="col-6 col-12-medium">
+                <section>
+                  <form method="post" action="#">
+                    <div class="row gtr-50">
+                      <div class="col-6 col-12-small">
+                        <input name="name" placeholder="Name" type="text" />
+                      </div>
+                      <div class="col-6 col-12-small">
+                        <input name="email" placeholder="Email" type="text" />
+                      </div>
+                      <div class="col-12">
+                        <textarea name="message" placeholder="Message"></textarea>
+                      </div>
+                      <div class="col-12">
+                        <a href="#" class="form-button-submit button icon solid fa-envelope">Send Message</a>
+                      </div>
+                    </div>
+                  </form>
+                </section>
+              </div>
+  </div>
+  <div>
+    <p style="text-align: center">Made Interactive with HTML5UP</p>
+  </div>
+</body>
+</html>
+
