@@ -1,44 +1,5 @@
 
 
-/*#nav {
-	position: absolute;
-	top: 0.5em;
-	left: 0;
-	width: 100%;
-	cursor: default;
-}
-
-#nav ul li{
-	display: inline-block;
-	padding-right: 1em;
-}
-
-#nav ul li a{
-	border: 0;
-	text-decoration: none;
-	text-transform: uppercase;
-	font-weight: 400;
-	color: #777;
-	outline: 0;
-	display: block;
-	background-color: #272725; 
-	border: none;
-	color: #272725;
-	padding-left: 40px;
-	padding-right: 40px;
-	padding-top: 10px;
-	padding-bottom: 10px;
-	text-align: center;
-	text-decoration: none;
-	display: inline-block;
-	/*font-size: 16px;
-	margin: 4px 2px;
-	cursor: pointer;
-	/*border-radius: 12px;
-}*/
-
-
-
 
 #nav {
 		position: absolute;
@@ -96,7 +57,7 @@
 
 /* Table */
 
-	.actions-table {
+	table {
 		border-style: solid;
 		border: 3px;
 		border-color: ;
