@@ -40,6 +40,10 @@ def resources():
 def volunteer():
 	return render_template('volunteer.html')
 
+@app.route('/aboutus/')
+def aboutus():
+	return render_template('aboutus.html')
+
 if __name__ == "__main__":
 	app.run()
 
