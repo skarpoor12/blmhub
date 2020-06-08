@@ -19,19 +19,19 @@
     </nav>
   </div>
   <div class="container">
-  <form action="/volunteer/" style="font-family: Arial;">
+  <form action="/volunteer/" style="font-family: Arial;" method="POST">
     <label for="fname" style="padding-top: 1em;">First Name</label>
-    <input type="text" id="fname" name="firstname" placeholder="Your name..">
+    <input type="text" id="fname" name="data" placeholder="Your name..">
 
     <label for="lname" style="padding-top: 1em;">Last Name</label>
-    <input type="text" id="lname" name="lastname">
+    <input type="text" id="lname" name="data">
 
     <label for="zipcode" style="padding-top: 1em;">Zip Code</label>
-    <input type="text" id="zipcode" name="zipcode">
+    <input type="text" id="zipcode" name="data">
 
 
     <label>Type of help you can provide</label>
-    <select id="help" name="help">
+    <select id="help" name="data">
       <option value="Medical">Medical</option>
       <option value="Legal">Legal</option>
       <option value="Other">Other</option>
@@ -39,7 +39,7 @@
 
     <label style="padding-top: 1em;">If you typed other, please explain</label>
      <br>
-     <textarea rows = "5" cols = "60" name = "message">
+     <textarea rows = "5" cols = "60" name = "data">
      </textarea><br>
     
     <input type="submit" value="Submit">

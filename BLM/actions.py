@@ -1,10 +1,12 @@
 import gspread
 from oauth2client.service_account import ServiceAccountCredentials
 import pandas as pd
+from apiclient.discovery import build
 
 from flask import *
 from functools import wraps
 import sqlite3
+
 
 
 
@@ -52,11 +54,46 @@ def resources():
 
 @app.route('/volunteer/', methods=['GET', 'POST'])
 def volunteer():
-	if request.method == 'GET':
-		return render_template('volunteer.html')
 	if request.method == 'POST':
-		#write to a google sheets using API
-		return render_template('volunteer.html')
+
+		#open google sheets
+		scope = ['https://spreadsheets.google.com/feeds', 'https://www.googleapis.com/auth/drive']
+		creds = ServiceAccountCredentials.from_json_keyfile_name('blmvolunteer.json', scope)
+		client = gspread.authorize(creds)
+		service = build('sheets', 'v4', credentials=creds)
+		sheet = service.spreadsheets()
+
+		data = request.form.getlist('data')
+
+		data_new = []
+
+		for i in data:
+			data_new.append([i])
+
+		print(data_new)
+		# body = {
+		#   "values": data_new
+		#   "majorDimension": enum (COLUMN)
+		# }
+
+
+		body = {
+		  "majorDimension": 'COLUMNS',
+		  "values": data_new
+		}
+
+
+		spreadsheetId = "1aCSRz0nTQ8o8SsaYvZs-hvDjHj7WVhC2GXhhCXSW--Q"
+		range = "Sheet1!A:E";
+		sheet.values().append(
+		  spreadsheetId=spreadsheetId,
+		  range=range,
+		  body=body,
+		  valueInputOption="USER_ENTERED"
+		).execute()
+				
+
+	return render_template('volunteer.html')
 
 
 
