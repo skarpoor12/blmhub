@@ -34,24 +34,29 @@ def resources():
 	    # target _blank to open new window
 	    # extract clickable text to display for your link
 
-	    return f'<a href="{link}" class="scrollable" style="color: #272725">Go To This Resource</a>'
+	    return f'<a href="{link}" style="color: #272725">Go To This Resource</a>'
 
 	
+	df['Links'] = df['Links'].apply(make_clickable)
 
 	if request.method == 'GET':
-		df['Links'] = df['Links'].apply(make_clickable)
+		
 		return render_template('resources.html',  tables=[df.to_html(escape=False)])
 
 	if request.method == 'POST':
 		filters = request.form.getlist('filters')
 		results = df.loc[df['Type'].isin(filters)]
-		return render_template('resources.html', tables=[results.to_html()])
+		return render_template('resources.html', tables=[results.to_html(escape=False)])
 	
 
 
 @app.route('/volunteer/', methods=['GET', 'POST'])
 def volunteer():
-	return render_template('volunteer.html')
+	if request.method == 'GET':
+		return render_template('volunteer.html')
+	if request.method == 'POST':
+		#write to a google sheets using API
+		return render_template('volunteer.html')
 
 
 

@@ -1408,7 +1408,7 @@
 /* Table */
 
 	table {
-		max-width: 805;
+		max-width: 100%;
 	}
 
 		table tbody tr {
