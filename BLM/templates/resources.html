@@ -1,31 +1,59 @@
 <!DOCTYPE html>
 <html lang="eng">
 <head>
-	<link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}"/>
-  	<meta charset="utf-8" />
-  	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-	<title>Resources</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}"/>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <title>Resources</title>
 </head>
 <body>
-	<div style="padding-bottom: 6em">
-  	<nav id="nav">
+  <div style="padding-bottom: 6em">
+    <nav id="nav">
         <ul style="text-align: center; ">
-          <li><a class="button1 not-active" href="index.html"><span>HOME</span></a></li>
-          <li><a class="current" href="resources.html"><span>RESOURCES</span></a></li>
+          <li><a class="button1 not-active" href="{{ url_for('home') }}"><span>HOME</span></a></li>
+          <li><a class="current" href="{{ url_for('resources') }}"><span>RESOURCES</span></a></li>
           <li><a class="button1 not-active" href="index.html"><span>LEARN</span></a></li>
-          <li><a class="button1 not-active" href="index.html"><span>NEWS</span></a></li>
-          <li><a class="button1 not-active" href="index.html"><span>VOLUNTEER</span></a></li>
-        </ul>
+          <li><a class="button1 not-active" href="{{ url_for('volunteer') }}"><span>VOLUNTEER</span></a></li>
+          <li><a class="button1 not-active" href="{{ url_for('aboutus') }}"><span>ABOUT US</span></a></li>
     </nav>
   </div>
+  <div class="container">
+            <div class="row">
 
-  {% for table in tables %}
-            {{ table|safe }}
-  {% endfor %}
+              <!-- Content -->
+                <div id="content" class="col-10 col-12-medium">
+
+                  <!-- Post -->
+                    <article class="box post">
+                      <div class="database">
+                                {% for table in tables %}
+                                          {{ table|safe }}
+                                {% endfor %}
+                      </div>
+                    </article>
+
+  </div>
+  <div id="sidebar" class="col-4 col-12-medium">
+
+                  <!-- Excerpts -->
+                    <section>
+                      <ul class="divided">
+                        <li>
+
+                          <!-- Excerpt -->
+                            <article class="box excerpt">
+                              <button>Filter1</button>
+                            </article>
+
+                        </li>
+                
+                      </ul>
+                    </section>
 
 
+  </div>
   <div>
-  	<p style="text-align: center">Made Interactive with HTML5UP</p>
+    <p style="text-align: center"> Made Interactive with HTML5UP</p>
   </div>
 </body>
 </html>
