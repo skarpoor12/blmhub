@@ -44,6 +44,10 @@ def volunteer():
 def aboutus():
 	return render_template('aboutus.html')
 
+# @app.route('/faq/')
+# def volunteer():
+# 	return render_template('faq.html')
+
 if __name__ == "__main__":
 	app.run()
 
