@@ -18,30 +18,33 @@
         </ul>
     </nav>
   </div>
-  <div>
-    <div class="container">
-            <div class="row aln-center">
-              <div class="col-6 col-12-medium">
-                <section>
-                  <form method="post" action="#">
-                    <div class="row gtr-50">
-                      <div class="col-6 col-12-small">
-                        <input name="name" placeholder="Name" type="text" />
-                      </div>
-                      <div class="col-6 col-12-small">
-                        <input name="email" placeholder="Email" type="text" />
-                      </div>
-                      <div class="col-12">
-                        <textarea name="message" placeholder="Message"></textarea>
-                      </div>
-                      <div class="col-12">
-                        <a href="#" class="form-button-submit button icon solid fa-envelope">Send Message</a>
-                      </div>
-                    </div>
-                  </form>
-                </section>
-              </div>
-  </div>
+  <div class="container">
+  <form action="/volunteer/" style="font-family: Arial;">
+    <label for="fname" style="padding-top: 1em;">First Name</label>
+    <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+    <label for="lname" style="padding-top: 1em;">Last Name</label>
+    <input type="text" id="lname" name="lastname">
+
+    <label for="zipcode" style="padding-top: 1em;">Zip Code</label>
+    <input type="text" id="zipcode" name="zipcode">
+
+
+    <label>Type of help you can provide</label>
+    <select id="help" name="help">
+      <option value="Medical">Medical</option>
+      <option value="Legal">Legal</option>
+      <option value="Other">Other</option>
+    </select>
+
+    <label style="padding-top: 1em;">If you typed other, please explain</label>
+     <br>
+     <textarea rows = "5" cols = "60" name = "message">
+     </textarea><br>
+    
+    <input type="submit" value="Submit">
+  </form>
+</div>
   <div>
     <p style="text-align: center">Made Interactive with HTML5UP</p>
   </div>

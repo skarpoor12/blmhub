@@ -34,7 +34,7 @@ def resources():
 	    # target _blank to open new window
 	    # extract clickable text to display for your link
 
-	    return f'<a href="{link}" style="color: #272725">Go To This Resource</a>'
+	    return f'<a href="{link}" class="scrollable" style="color: #272725">Go To This Resource</a>'
 
 	
 
@@ -49,9 +49,11 @@ def resources():
 	
 
 
-@app.route('/volunteer/')
+@app.route('/volunteer/', methods=['GET', 'POST'])
 def volunteer():
 	return render_template('volunteer.html')
+
+
 
 @app.route('/aboutus/')
 def aboutus():
