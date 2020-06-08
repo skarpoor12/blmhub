@@ -15,7 +15,7 @@ def home():
 	return render_template('index.html')
 
 
-@app.route('/resources/')
+@app.route('/resources/', methods=['GET', 'POST'])
 def resources():
 	# use creds to create a client to interact with the Google Drive API
 	scope = ['https://spreadsheets.google.com/feeds', 'https://www.googleapis.com/auth/drive']
@@ -30,9 +30,17 @@ def resources():
 	list_of_hashes = sheet.get_all_records()
 
 	df = pd.DataFrame.from_dict(list_of_hashes)
-	results = df.loc[df['Type'] == "Support Black Organizations"]
+	
 
-	return render_template('resources.html',  tables=[df.to_html()])
+	if request.method == 'GET':
+		pd.set_option('display.max_colwidth', 1)
+		return render_template('resources.html',  tables=[df.to_html()])
+
+	if request.method == 'POST':
+		print("POST")
+		filters = request.form.getlist('filters')
+		results = df.loc[df['Type'].isin(filters)]
+		return render_template('resources.html', tables=[results.to_html()])
 	
 
 
