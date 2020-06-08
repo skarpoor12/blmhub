@@ -70,12 +70,6 @@ def volunteer():
 		for i in data:
 			data_new.append([i])
 
-		print(data_new)
-		# body = {
-		#   "values": data_new
-		#   "majorDimension": enum (COLUMN)
-		# }
-
 
 		body = {
 		  "majorDimension": 'COLUMNS',
