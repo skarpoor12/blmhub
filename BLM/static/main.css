@@ -1404,10 +1404,11 @@
 		border: 0;
 	}
 
+
 /* Table */
 
 	table {
-		width: 100%;
+		max-width: 805;
 	}
 
 		table tbody tr {

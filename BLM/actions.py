@@ -30,14 +30,19 @@ def resources():
 	list_of_hashes = sheet.get_all_records()
 
 	df = pd.DataFrame.from_dict(list_of_hashes)
+	def make_clickable(link):
+	    # target _blank to open new window
+	    # extract clickable text to display for your link
+
+	    return f'<a href="{link}" style="color: #272725">Go To This Resource</a>'
+
 	
 
 	if request.method == 'GET':
-		pd.set_option('display.max_colwidth', 1)
-		return render_template('resources.html',  tables=[df.to_html()])
+		df['Links'] = df['Links'].apply(make_clickable)
+		return render_template('resources.html',  tables=[df.to_html(escape=False)])
 
 	if request.method == 'POST':
-		print("POST")
 		filters = request.form.getlist('filters')
 		results = df.loc[df['Type'].isin(filters)]
 		return render_template('resources.html', tables=[results.to_html()])
