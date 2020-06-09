@@ -12,9 +12,41 @@ import sqlite3
 
 app = Flask(__name__)
 
-@app.route('/home/')
+@app.route('/home/', methods=['GET', 'POST'])
 def home():
+	if request.method == 'POST':
+		scope = ['https://spreadsheets.google.com/feeds', 'https://www.googleapis.com/auth/drive']
+		creds = ServiceAccountCredentials.from_json_keyfile_name('blmvolunteer.json', scope)
+		client = gspread.authorize(creds)
+		service = build('sheets', 'v4', credentials=creds)
+		sheet = service.spreadsheets()
+
+		data = request.form.getlist('data')
+
+		data_new = []
+
+		for i in data:
+			data_new.append([i])
+
+		body = {
+			"majorDimension": 'COLUMNS',
+			"values": data_new
+		}
+
+		spreadsheetId = "1irAr74XtTMnrjuC3UVK-XIDtbjPDllJZypDgjOXE4go"
+		range = "Sheet1!A:F";
+		sheet.values().append(
+			spreadsheetId=spreadsheetId,
+			range=range,
+			body=body,
+			valueInputOption="USER_ENTERED"
+		).execute()
+
 	return render_template('index.html')
+
+@app.route('/learn/')
+def learn():
+	return render_template('learn.html')
 
 
 @app.route('/resources/', methods=['GET', 'POST'])

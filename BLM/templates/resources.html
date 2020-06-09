@@ -12,7 +12,7 @@
         <ul style="text-align: center; ">
           <li><a class="button1 not-active" href="{{ url_for('home') }}"><span>HOME</span></a></li>
           <li><a class="current" href="{{ url_for('resources') }}"><span>RESOURCES</span></a></li>
-          <li><a class="button1 not-active" href="index.html"><span>LEARN</span></a></li>
+          <li><a class="button1 not-active" href="{{ url_for('learn') }}"><span>LEARN</span></a></li>
           <li><a class="button1 not-active" href="{{ url_for('volunteer') }}"><span>VOLUNTEER</span></a></li>
           <li><a class="button1 not-active" href="{{ url_for('aboutus') }}"><span>ABOUT US</span></a></li>
     </nav>
@@ -21,6 +21,10 @@
             <div class="row">
 
               <!-- Content -->
+                 <div style="text-align: center; width: 100%;">
+                                  <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+                                  <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1JjnI2jGmHx_cU4zXzii8QvGJtEN00GDO" width="500px" height="400px"></iframe>
+                 </div>
                 <div id="content" class="col-8 col-12-medium">
 
                   <!-- Post -->
@@ -38,11 +42,14 @@
 
                             <!-- Excerpts -->
                               <section>
+                                <button onclick="window.location.href='{{ url_for('learn') }}';">
+                                  I don't know where to start
+                                </button>
                                 <header>
                                   <h2 style="color: #32322F; vertical-align: middle;">Filter Results</h2>
                                 </header>
                                 <ul class="divided" style="list-style-type: none;">
-                                  <li style=>
+                                  <li>
                                     <!-- Excerpt -->
                                       <article class="box excerpt">
                                         <form method="POST" action="/resources/">
@@ -62,7 +69,8 @@
                                   </li>
                           
                                 </ul>
-                                <img src="{{ url_for('static', filename ='pics/graphic.jpg') }}" alt="graphic" style="width:100%">
+
+
                               </section>
                 </div>
             </div>
