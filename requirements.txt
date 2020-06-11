@@ -3,3 +3,7 @@ gunicorn
 django-heroku
 Flask
 gspread
+oauth2client
+Pandas
+apiclient
+functools
