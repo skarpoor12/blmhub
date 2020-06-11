@@ -5,4 +5,4 @@ Flask
 gspread
 oauth2client
 Pandas
-apiclient
+apiclient.discovery
