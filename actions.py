@@ -12,7 +12,7 @@ import sqlite3
 
 app = Flask(__name__)
 
-@app.route('/home/', methods=['GET', 'POST'])
+@app.route('/', methods=['GET', 'POST'])
 def home():
 	if request.method == 'POST':
 		scope = ['https://spreadsheets.google.com/feeds', 'https://www.googleapis.com/auth/drive']
