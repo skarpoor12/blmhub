@@ -14,8 +14,8 @@
   <section id="header">
   <div style="padding-bottom: 6em" class="container">
     <nav id="nav">
+        <img src="{{ url_for('static', filename ='pics/logo.jpg') }}" alt="logo" style="width:100%">
         <ul style="text-align: center; ">
-          <li><img src="{{ url_for('static', filename ='pics/Aditi.jpg') }}" alt="Aditi" style="width:100%"></li>
           <li><a class="current" href="{{ url_for('home') }}"><span>HOME</span></a></li>
           <li><a class="button1 not-active" href="{{ url_for('resources') }}"><span>RESOURCES</span></a></li>
           <li><a class="button1 not-active" href="{{ url_for('learn') }}"><span>LEARN</span></a></li>

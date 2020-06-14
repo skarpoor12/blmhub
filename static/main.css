@@ -1631,7 +1631,9 @@
 		width: 100%;
 		cursor: default;
 	}
-
+#nav ul {
+    display: inline-block;
+}
 #nav > ul > li {
 	display: inline-block;
 
