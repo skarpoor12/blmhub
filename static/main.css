@@ -1631,9 +1631,7 @@
 		width: 100%;
 		cursor: default;
 	}
-#nav ul {
-    display: inline-block;
-}
+
 #nav > ul > li {
 	display: inline-block;
 
@@ -1661,19 +1659,18 @@
 .current {
 	background-color: #272725 !important; 
 	color: white !important;
-	padding-left: 10px;
-	padding-right: 10px;
+	padding-left: 15px;
+	padding-right: 15px;
 	padding-top: 5px;
 	padding-bottom: 5px;
 	border-radius: 12px;
 }
 
-
 #nav ul li a:hover {
 	background-color: #272725;
 	color: white;
-	padding-left: 10px;
-	padding-right: 10px;
+	padding-left: 15px;
+	padding-right: 15px;
 	padding-top: 5px;
 	padding-bottom: 5px;
 	border-radius: 12px;

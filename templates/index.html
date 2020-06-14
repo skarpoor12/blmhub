@@ -2,6 +2,7 @@
 <html lang="eng">
 <head>
   <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}"/>
+  <link rel="stylesheet" href="/Users/shreyak/Documents/theblmhub/static/main.css"/>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
   <title>Resources</title>
@@ -14,9 +15,7 @@
   <section id="header">
   <div style="padding-bottom: 6em;" class="container">
     <nav id="nav">
-
         <ul style="text-align: center;">
-          <li><img src="{{ url_for('static', filename ='pics/logo.jpg') }}" alt="logo" style="padding-left: 0; width:20%"></li>
           <li><a class="current" href="{{ url_for('home') }}"><span>HOME</span></a></li>
           <li><a class="button1 not-active" href="{{ url_for('resources') }}"><span>RESOURCES</span></a></li>
           <li><a class="button1 not-active" href="{{ url_for('learn') }}"><span>LEARN</span></a></li>
