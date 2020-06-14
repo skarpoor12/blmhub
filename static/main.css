@@ -1661,8 +1661,8 @@
 .current {
 	background-color: #272725 !important; 
 	color: white !important;
-	padding-left: 15px;
-	padding-right: 15px;
+	padding-left: 10px;
+	padding-right: 10px;
 	padding-top: 5px;
 	padding-bottom: 5px;
 	border-radius: 12px;
@@ -1672,8 +1672,8 @@
 #nav ul li a:hover {
 	background-color: #272725;
 	color: white;
-	padding-left: 15px;
-	padding-right: 15px;
+	padding-left: 10px;
+	padding-right: 10px;
 	padding-top: 5px;
 	padding-bottom: 5px;
 	border-radius: 12px;
