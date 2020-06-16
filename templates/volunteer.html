@@ -2,6 +2,7 @@
 <html lang="eng">
 <head>
 	<link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}"/>
+    <link href='https://fonts.googleapis.com/css?family=Antic Slab' rel='stylesheet'>
   	<meta charset="utf-8" />
   	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 	<title>Volunteer</title>
@@ -18,32 +19,37 @@
         </ul>
     </nav>
   </div>
-  <div class="container">
-  <form action="/volunteer/" style="font-family: Arial;" method="POST">
-    <label for="fname" style="padding-top: 1em;">First Name</label>
-    <input type="text" id="fname" name="data" placeholder="Your name..">
+  <div class="container" style="font-family: 'Antic Slab';">
+      <form action="/volunteer/" style="font-family: 'Antic Slab';";" method="POST">
+        <label for="fname" style="padding-top: 1em;">First Name</label>
+        <input type="text" id="fname" name="data" placeholder="Your name..">
 
-    <label for="lname" style="padding-top: 1em;">Last Name</label>
-    <input type="text" id="lname" name="data">
+        <label for="lname" style="padding-top: 1em;">Last Name</label>
+        <input type="text" id="lname" name="data">
 
-    <label for="zipcode" style="padding-top: 1em;">Zip Code</label>
-    <input type="text" id="zipcode" name="data">
+        <label for="zipcode" style="padding-top: 1em;">Zip Code</label>
+        <input type="text" id="zipcode" name="data">
 
+        <label for="email" style="padding-top: 1em;">Email</label>
+        <input type="text" id="zipcode" name="data">
 
-    <label>Type of help you can provide</label>
-    <select id="help" name="data">
-      <option value="Medical">Medical</option>
-      <option value="Legal">Legal</option>
-      <option value="Other">Other</option>
-    </select>
+        <label for="phone" style="padding-top: 1em;">Phone Number</label>
+        <input type="text" id="zipcode" name="data">
 
-    <label style="padding-top: 1em;">If you typed other, please explain</label>
-     <br>
-     <textarea rows = "5" cols = "60" name = "data">
-     </textarea><br>
-    
-    <input type="submit" value="Submit">
-  </form>
+        <label>Type of help you can provide</label>
+        <select id="help" name="data">
+          <option value="Medical">Medical</option>
+          <option value="Legal">Legal</option>
+          <option value="Other">Other</option>
+        </select>
+
+        <label style="padding-top: 1em;">If you typed other, please explain</label>
+         <br>
+         <textarea rows = "5" cols = "60" name = "data">
+         </textarea><br>
+
+        <input type="submit" value="Submit">
+      </form>
 </div>
   <div>
     <p style="text-align: center">Made Interactive with HTML5UP</p>
