@@ -6,29 +6,49 @@
   <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}"/>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-  <title>Resources</title>
+  <title>FAQ's</title>
 </head>
 <body>
-  <div style="padding-bottom: 6em">
+  <div id="page-wrapper">
+  <section id="header">
+  <div style="padding-bottom: 6em;" class="container">
     <nav id="nav">
-        <ul style="text-align: center; ">
+        <ul style="text-align: center;">
           <li><a class="button1 not-active" href="{{ url_for('home') }}"><span>HOME</span></a></li>
           <li><a class="button1 not-active" href="{{ url_for('resources') }}"><span>RESOURCES</span></a></li>
-          <li><a class="current" href="{{ url_for('learn') }}"><span>LEARN</span></a></li>
+          <li><a class="button1 not-active" href="{{ url_for('learn') }}"><span>LEARN</span></a></li>
           <li><a class="button1 not-active" href="{{ url_for('volunteer') }}"><span>VOLUNTEER</span></a></li>
-          <li><a class="button1 not-active" href="{{ url_for('faq') }}"><span>FAQ's</span></a></li>
-
+          <li><a class="current" href="{{ url_for('faq') }}"><span>FAQ's</span></a></li>
           <li><a class="button1 not-active" href="{{ url_for('aboutus') }}"><span>ABOUT US</span></a></li>
+        </ul>
     </nav>
   </div>
+  </section>
+<!--   </div>
   <div class="container">
     <img src="{{ url_for('static', filename ='pics/graphic.jpg') }}" alt="graphic" style="width:100%">
   </div>
   <div>
     <p style="text-align: center"> Made Interactive with HTML5UP</p>
-  </div>
+  </div> -->
 
   <!-- Scripts -->
+
+    <div class="container" style="font-family: 'Antic Slab';">
+    <h1 class="big-header" style="text-align: center; font-size: 500%; color: #272725;">FAQ's</h1>
+
+    <h1 style="color: #777a7e;">Why are we protesting? What are we protesting?</h1>
+    <p style="font-size: 110%;">Change only happens when the people take to the street. The brutal murders of George Floyd, Breonna Taylor, and hundreds exposed the awful truth- our justice system is lethally flawed, and radical change is necessary. Black people are two and a half times more likely to be killed by police brutality than their white counterparts, and many of these deaths happen to be young men in their early 20s. The goal of the protests are simple: bring the murderers to justice. Abolish the police and the systemic racism our justice system follows. </p>
+
+    <h1 style="color: #777a7e;"></h1>
+    <p style="font-size: 110%;"></p>
+
+    <h1 style="color: #777a7e;"></h1>
+    <p style="font-size: 110%;"></p>
+
+    <h1 style="color: #777a7e;"></h1>
+    <p style="font-size: 110%;"></p>
+
       <script src="{{ url_for('static', filename ='js/jquery.min.js') }}"></script>
       <script src="{{ url_for('static', filename ='js/jquery.dropotron.min.js') }}"></script>
       <script src="{{ url_for('static', filename ='js/browser.min.js') }}"></script>

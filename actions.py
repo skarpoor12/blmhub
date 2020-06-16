@@ -49,6 +49,9 @@ def home():
 def learn():
 	return render_template('learn.html')
 
+@app.route('/faq/')
+def faq():
+	return render_template('faq.html')
 
 @app.route('/resources/', methods=['GET', 'POST'])
 def resources():
