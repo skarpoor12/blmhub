@@ -1,32 +1,35 @@
 <!DOCTYPE html>
-<html lang="eng">
+<html>
 <head>
     <link rel="icon" href="{{ url_for('static', filename ='pics/favicon.png') }}">
 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}"/>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-  <title>Resources</title>
+  <title>Protest</title>
 </head>
 <body>
-  <div style="padding-bottom: 6em">
+
+
+<div style="padding-bottom: 6em">
     <nav id="nav">
         <ul style="text-align: center;">
           <li><a class="button1 not-active" href="{{ url_for('home') }}"><span>HOME</span></a></li>
           <li><a class="button1 not-active" href="{{ url_for('resources') }}"><span>DONATE</span></a></li>
-          <li><a class="button1 not-active" href="{{ url_for('learn') }}"><span>PROTEST</span></a></li>
+          <li><a class="current" href="{{ url_for('protest') }}"><span>PROTEST</span></a></li>
           <li><a class="button1 not-active" href="{{ url_for('volunteer') }}"><span>VOLUNTEER</span></a></li>
           <li><a class="button1 not-active" href="{{ url_for('faq') }}"><span>FAQ's</span></a></li>
           <li><a class="button1 not-active" href="{{ url_for('aboutus') }}"><span>ABOUT US</span></a></li>
         </ul>
     </nav>
   </div>
-  <div class="container">
-    <img src="{{ url_for('static', filename ='pics/graphic.jpg') }}" alt="graphic" style="width:100%">
-  </div>
-  <div>
-    <p style="text-align: center"> Made Interactive with HTML5UP</p>
-  </div>
+
+
+<div style="text-align: center; width: 100%;">
+                                  <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+                                  <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1JjnI2jGmHx_cU4zXzii8QvGJtEN00GDO" width="500px" height="400px"></iframe>
+                 </div>
 
   <!-- Scripts -->
       <script src="{{ url_for('static', filename ='js/jquery.min.js') }}"></script>
@@ -35,7 +38,6 @@
       <script src="{{ url_for('static', filename ='js/breakpoints.min.js') }}"></script>
       <script src="{{ url_for('static', filename ='js/util.js') }}"></script>
       <script src="{{ url_for('static', filename ='js/main.js') }}"></script>
-      
+
 </body>
 </html>
-

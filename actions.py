@@ -131,6 +131,10 @@ def volunteer():
 def aboutus():
 	return render_template('aboutus.html')
 
+@app.route('/protest/')
+def protest():
+	return render_template('protests.html')
+
 # @app.route('/faq/')
 # def volunteer():
 # 	return render_template('faq.html')

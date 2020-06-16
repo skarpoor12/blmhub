@@ -1,6 +1,59 @@
 <!DOCTYPE html>
 <html lang="eng">
 <head>
+
+<style>
+.button {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #f4511e;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+{
+    width:100%;
+    text-align: center;
+}
+.inner
+{
+    display: inline-block;
+}
+
+</style>
+
     <link rel="icon" href="{{ url_for('static', filename ='pics/favicon.png') }}">
 
   <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}"/>
@@ -15,8 +68,8 @@
     <nav id="nav">
         <ul style="text-align: center;">
           <li><a class="button1 not-active" href="{{ url_for('home') }}"><span>HOME</span></a></li>
-          <li><a class="button1 not-active" href="{{ url_for('resources') }}"><span>RESOURCES</span></a></li>
-          <li><a class="button1 not-active" href="{{ url_for('learn') }}"><span>LEARN</span></a></li>
+          <li><a class="button1 not-active" href="{{ url_for('resources') }}"><span>DONATE</span></a></li>
+          <li><a class="button1 not-active" href="{{ url_for('protest') }}"><span>PROTEST</span></a></li>
           <li><a class="button1 not-active" href="{{ url_for('volunteer') }}"><span>VOLUNTEER</span></a></li>
           <li><a class="current" href="{{ url_for('faq') }}"><span>FAQ's</span></a></li>
           <li><a class="button1 not-active" href="{{ url_for('aboutus') }}"><span>ABOUT US</span></a></li>
@@ -24,6 +77,8 @@
     </nav>
   </div>
   </section>
+
+
 <!--   </div>
   <div class="container">
     <img src="{{ url_for('static', filename ='pics/graphic.jpg') }}" alt="graphic" style="width:100%">
@@ -37,17 +92,73 @@
     <div class="container" style="font-family: 'Antic Slab';">
     <h1 class="big-header" style="text-align: center; font-size: 500%; color: #272725;">FAQ's</h1>
 
-    <h1 style="color: #777a7e;">Why are we protesting? What are we protesting?</h1>
+    <h1 style="color: #777a7e; font-size: 130%;">Why are we protesting? What are we protesting?</h1>
     <p style="font-size: 110%;">Change only happens when the people take to the street. The brutal murders of George Floyd, Breonna Taylor, and hundreds exposed the awful truth- our justice system is lethally flawed, and radical change is necessary. Black people are two and a half times more likely to be killed by police brutality than their white counterparts, and many of these deaths happen to be young men in their early 20s. The goal of the protests are simple: bring the murderers to justice. Abolish the police and the systemic racism our justice system follows. </p>
 
-    <h1 style="color: #777a7e;"></h1>
-    <p style="font-size: 110%;"></p>
+    <h1 style="color: #777a7e; font-size: 130%;">What are bail funds, and why should I donate to them?</h1>
+    <p style="font-size: 110%;">Most, if not all protests, have been peaceful, yet police continue to detain innocent protestors. Community bail funds keep innocent protestors out of jail. Bail funds are a great way to donate to the community and stay committed to the cause if you can’t physically protest. If you’re interested in donating to a bail fund, check out the Donate tab. </p>
 
-    <h1 style="color: #777a7e;"></h1>
-    <p style="font-size: 110%;"></p>
+    <h1 style="color: #777a7e; font-size: 130%;">Why should I sign petitions?</h1>
+    <p style="font-size: 110%;">Petitions are just as important as monetary donations. Petitions give a movement public and political legitimacy. No politician wants to be seen as the bad guy- seeing that their constituents are invested in a cause and are fighting for change helps sway the political game board. Petitions lay the bricks for the road to lasting social change. Find petitions to sign in the Donate tab. </p>
 
-    <h1 style="color: #777a7e;"></h1>
-    <p style="font-size: 110%;"></p>
+    <h1 style="color: #777a7e; font-size: 130%;">Why defund the police? What happens if we do?</h1>
+    <p style="font-size: 110%;">The police system has been systemically racist since its conception. Police were first introduced to American society as a way to capture escaped slaves, and then moved to enforce the Jim Crowe Laws. Basically, the entire police system is founded on old, racist, and violent ideas. And before you say “not all cops,” realize that “good” cops have upheld these racist policies in their silence. ACAB only goes to show that all officers are complicit in a system that has and always will devalue lives of color. 
+
+      <br> <br>
+
+Defunding and abolishing the police doesn’t mean there’s no police. Cities have been increasing police funds for decades, and this means slashing funds to valuable social services like homeless shelters, mental health clinics, and the like. This means that cops respond to any and all kinds of distress calls. Some of these situations shouldn’t have an armed officer at the scene (ie a suicidal teenager). Defunding the police means taking the extra money being added to the police force and investing in social services. Using this money to build affordable housing and mental health services would create a community better prepared to handle a mental health crisis in public rather than an armed police officer. Read more below: 
+</p>
+
+<div id="outer" style="text-align: center;">
+  <div class="inner"><a target="_blank" href="https://www.nytimes.com/2020/06/08/us/what-does-defund-police-mean.html">
+<button class="button" style="vertical-align:middle"><span>NY Times</span></button>
+</a></div>
+  <div class="inner"><a target="_blank" href="https://www.marketwatch.com/story/john-oliver-explains-defund-the-police-and-why-it-doesnt-mean-no-police-2020-06-08">
+<button class="button" style="vertical-align:middle"><span>MarketWatch</span></button>
+</a></div>
+  <div class="inner"><a target="_blank" href="https://www.independent.co.uk/voices/acab-abolish-police-george-floyd-protests-cops-a9543386.html">
+<button class="button" style="vertical-align:middle"><span>Independent</span></button>
+</a></div>
+</div>
+
+    <h1 style="color: #777a7e; font-size: 130%;">How can I help without protesting?</h1>
+    <p style="font-size: 110%;">That’s easy. Donate your time and your money. Sign petitions, donate to bail funds, black-owned businesses, and organizations that work towards black success. Visit the Donate tab to start. Volunteer your time by offering to pay bail or help protests that have been hurt or unlawfully detained. Visit the Volunteer tab to sign up. 
+
+
+      <br> <br>
+
+Social media activism is great, but make sure you’re being actively antiracist. Start conversations with coworkers, family and friends. Don’t be afraid to call people out on their racism, regardless of how small an infraction it was. Enjoy and spread black art- this includes black music, black authors, and black artists. Educate yourself on Black History in our country, and actively call for change in any way you can. Learn more below. 
+</p>
+
+<div id="outer" style="text-align: center;">
+  <div class="inner"><a target="_blank" href="https://www.cnbc.com/2020/06/05/how-to-thoughtfully-talk-about-racial-inequality-with-your-coworkers.html">
+<button class="button" style="vertical-align:middle"><span>CNBC</span></button>
+</a></div>
+  <div class="inner"><a target="_blank" href="https://www.nytimes.com/2020/06/05/us/talking-to-kids-about-racism.html">
+<button class="button" style="vertical-align:middle"><span>NY Times</span></button>
+</a></div>
+  <div class="inner"><a target="_blank" href="https://drive.google.com/drive/folders/0Bz011IF2Pu9TUWIxVWxybGJ1Ync">
+<button class="button" style="vertical-align:middle"><span>BHM Library</span></button>
+</a></div>
+</div>
+
+    <h1 style="color: #777a7e; font-size: 130%;">What if I want to protest?</h1>
+    <p style="font-size: 110%;">Check out our Protest tab to find a protest near you. Be safe- we are in a global pandemic. Wear masks, hats, and gloves. DO NOT spread pictures or videos of other protestors, and don’t talk to the press. Fill out the form on our home page to be connected with volunteers willing to help those affected by the protests. Click the links below for more information on protest safety and information. 
+</p>
+
+<div id="outer" style="text-align: center;">
+  <div class="inner"><a target="_blank" href="https://docs.google.com/document/d/1vvtNu0rpLlCsgBNsrP98gub5a5ZPbXHzhSvxhIfx1_Y/edit">
+<button class="button" style="vertical-align:middle"><span>A Guide</span></button>
+</a></div>
+  <div class="inner"><a target="_blank" href="https://blacklivesmatters.carrd.co/#protesters
+">
+<button class="button" style="vertical-align:middle"><span>Carrd</span></button>
+</a></div>
+</div>
+
+
+
+
 
       <script src="{{ url_for('static', filename ='js/jquery.min.js') }}"></script>
       <script src="{{ url_for('static', filename ='js/jquery.dropotron.min.js') }}"></script>
