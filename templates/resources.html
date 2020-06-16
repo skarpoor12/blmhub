@@ -3,7 +3,8 @@
 <head>
     <link rel="icon" href="{{ url_for('static', filename ='pics/favicon.png') }}">
 
-  <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}"/>
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}"/>
+    <link href='https://fonts.googleapis.com/css?family=Antic Slab' rel='stylesheet'>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
   <title>Resources</title>
@@ -11,17 +12,56 @@
 <body>
   <div style="padding-bottom: 6em">
     <nav id="nav">
-        <ul style="text-align: center; ">
+        <ul style="text-align: center;">
           <li><a class="button1 not-active" href="{{ url_for('home') }}"><span>HOME</span></a></li>
-          <li><a class="current" href="{{ url_for('resources') }}"><span>RESOURCES</span></a></li>
-          <li><a class="button1 not-active" href="{{ url_for('learn') }}"><span>LEARN</span></a></li>
+          <li><a class="current" href="{{ url_for('resources') }}"><span>DONATE</span></a></li>
+          <li><a class="button1 not-active" href="{{ url_for('learn') }}"><span>PROTEST</span></a></li>
           <li><a class="button1 not-active" href="{{ url_for('volunteer') }}"><span>VOLUNTEER</span></a></li>
           <li><a class="button1 not-active" href="{{ url_for('faq') }}"><span>FAQ's</span></a></li>
 
           <li><a class="button1 not-active" href="{{ url_for('aboutus') }}"><span>ABOUT US</span></a></li>
+        </ul>
     </nav>
   </div>
-  <div class="container">
+  <div class="container" style="font-family: 'Antic Slab';">
+      <div style="text-align: center;">
+          <h1 class="big-header" style="text-align: center; font-size: 300%; color: #505154;">DONATE YOUR TIME AND MONEY.</h1>
+          <header>
+          <p style="text-align: center; color: #777a7e;">Sign petitions and donate to black owned businesses, bail funds, and organizations committed to black success.</p>
+          <p style="text-align: center; color: #777a7e;">We aim to battle inaction by providing a personalizable compilation of action items for everyone.</p>
+              <button onclick="window.location.href='{{ url_for('learn') }}';" style="text-decoration: none; color: #ed786a; font-family: 'Antic Slab';">Check how you'd like to donate</button>
+          </header>
+      </div>
+
+                            <div class = "container" style="padding-bottom: 2em; text-align: center;">
+                                <h2 style="color: #32322F;">Filter Results</h2>
+                                <ul class="divided" style="list-style-type: none;">
+                                  <li>
+                                    <!-- Excerpt -->
+                                      <article class="box excerpt">
+                                        <form method="POST" action="/resources/">
+                                          <label>
+                                          <input style="vertical-align: middle;" type="checkbox" value="Support Black Organizations" name="filters">Support Black Organizations</label>
+                                          <label>
+                                          <input style="vertical-align: middle;" type="checkbox" value="Bail Funds" name="filters">Bail Funds</label>
+                                          <label>
+                                          <input style="vertical-align: middle;" type="checkbox" value="Petitions" name="filters">Petitions</label>
+                                          <label>
+                                          <input style="vertical-align: middle;" type="checkbox" value = "Organizations" name="filters">
+                                          Organizations</label>
+                                          <input style="font-family: 'Antic Slab';" type="submit">
+                                        </form>
+                                      </article>
+
+                                  </li>
+
+                                </ul>
+                            </div>
+           <div>
+                {% for table in tables %}
+                          {{ table|safe }}
+                {% endfor %}
+           </div>
             <div class="row">
 
               <!-- Content -->
@@ -42,41 +82,7 @@
                 </div>
 
   
-                <div id="sidebar" class="col-4 col-12-medium">
 
-                            <!-- Excerpts -->
-                              <section>
-                                <button onclick="window.location.href='{{ url_for('learn') }}';">
-                                  I don't know where to start
-                                </button>
-                                <header>
-                                  <h2 style="color: #32322F; vertical-align: middle;">Filter Results</h2>
-                                </header>
-                                <ul class="divided" style="list-style-type: none;">
-                                  <li>
-                                    <!-- Excerpt -->
-                                      <article class="box excerpt">
-                                        <form method="POST" action="/resources/">
-                                          <label>
-                                          <input style="vertical-align: middle;" type="checkbox" value="Support Black Organizations" name="filters">Support Black Organizations</label>
-                                          <label>
-                                          <input style="vertical-align: middle;" type="checkbox" value="Bail Funds" name="filters">Bail Funds</label>
-                                          <label>
-                                          <input style="vertical-align: middle;" type="checkbox" value="Petitions" name="filters">Petitions</label>
-                                          <label>
-                                          <input style="vertical-align: middle;" type="checkbox" value = "Organizations" name="filters">
-                                          Organizations</label>
-                                          <input type="submit">
-                                        </form>
-                                      </article>
-
-                                  </li>
-                          
-                                </ul>
-
-
-                              </section>
-                </div>
             </div>
   </div>
   <div>

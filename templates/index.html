@@ -19,10 +19,11 @@
     <nav id="nav">
         <ul style="text-align: center;">
           <li><a class="current" href="{{ url_for('home') }}"><span>HOME</span></a></li>
-          <li><a class="button1 not-active" href="{{ url_for('resources') }}"><span>RESOURCES</span></a></li>
-          <li><a class="button1 not-active" href="{{ url_for('learn') }}"><span>LEARN</span></a></li>
+          <li><a class="button1 not-active" href="{{ url_for('resources') }}"><span>DONATE</span></a></li>
+          <li><a class="button1 not-active" href="{{ url_for('learn') }}"><span>PROTEST</span></a></li>
           <li><a class="button1 not-active" href="{{ url_for('volunteer') }}"><span>VOLUNTEER</span></a></li>
           <li><a class="button1 not-active" href="{{ url_for('faq') }}"><span>FAQ's</span></a></li>
+
           <li><a class="button1 not-active" href="{{ url_for('aboutus') }}"><span>ABOUT US</span></a></li>
         </ul>
     </nav>
@@ -33,10 +34,10 @@
 
 
   <div class="container" style="font-family: 'Antic Slab';">
+    <img src="{{ url_for('static', filename ='pics/logo.jpeg') }}" alt="logo" style="display: block; margin-left: auto; margin-right: auto; padding-bottom: 0;">
     <h1 class="big-header" style="text-align: center; font-size: 500%; color: #505154;">Welcome to <span style="color: #ed786a;">the BLM HUB</span></h1>
-    <p>We aim to battle inaction by providing a personalizable compilation of action items for everyone.</p>
     <h1 style="text-align: center; color: #777a7e;">Need Assistance?</h1>
-    <p>Fill out the form to be matched with volunteers in your area that can provide the assistance you need.</p>
+    <p style="text-align: center;">Fill out the form to be matched with volunteers in your area that can provide the assistance you need.</p>
     <form action="/" style="font-family: 'Antic Slab';" method="POST">
 
       <label>Level of Urgency</label>
