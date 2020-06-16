@@ -24,6 +24,12 @@ body {
 .color-bold {
     color: #ed786a; !important
 }
+
+.logo-image{
+    width: 20%;
+    overflow: hidden;
+    margin-top: -6px;
+}
 /* Container */
 
 	.container {
