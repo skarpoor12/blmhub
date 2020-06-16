@@ -9,8 +9,21 @@
 
 
 
+body {
+    font-family: 'Antic Slab';
+    font-size: 22px;
+}
 
+/*headers*/
+.big-header {
+    text-align: center;
+    color: #505154;
+    font-size: 1000%;
+}
 
+.color-bold {
+    color: #ed786a; !important
+}
 /* Container */
 
 	.container {
@@ -1919,7 +1932,8 @@
 						text-rendering: auto;
 						line-height: 1;
 						text-transform: none !important;
-						font-family: 'Font Awesome 5 Free';
+
+
 						font-weight: 900;
 					}
 
