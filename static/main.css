@@ -1782,7 +1782,7 @@ body {
 	}
 
 
-/* Medium */
+/* Large */
 
 	#navPanel, #titleBar {
 		display: none;
@@ -1986,6 +1986,7 @@ body {
 				-ms-transform: translateX(0);
 				transform: translateX(0);
 			}
+
 
 		/* Sidebar */
 
