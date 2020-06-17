@@ -83,7 +83,7 @@ body {
 		margin-top: calc(-0.5em + 1px);
 		margin-left: -2px;
 		list-style: none;
-	}
+	    }
 
 		.dropotron.level-0 {
 			margin-top: 1.5em;
@@ -1679,8 +1679,8 @@ body {
 .current {
 	background-color: #272725 !important; 
 	color: white !important;
-	padding-left: 15px;
-	padding-right: 15px;
+	padding-left: 10px;
+	padding-right: 10px;
 	padding-top: 5px;
 	padding-bottom: 5px;
 	border-radius: 12px;
@@ -1689,8 +1689,8 @@ body {
 #nav ul li a:hover {
 	background-color: #272725;
 	color: white;
-	padding-left: 15px;
-	padding-right: 15px;
+	padding-left: 10px;
+	padding-right: 10px;
 	padding-top: 5px;
 	padding-bottom: 5px;
 	border-radius: 12px;
@@ -1781,86 +1781,6 @@ body {
 
 	}
 
-/* Large */
-
-	@media screen and (max-width: 1280px) {
-
-		/* Basic */
-
-			body, input, textarea, select {
-				font-size: 12pt;
-			}
-
-			h2 br, h3 br, h4 br, h5 br, h6 br {
-				display: none;
-			}
-
-		/* Image */
-
-			.image.left {
-				max-width: 50%;
-			}
-
-			.image.right {
-				max-width: 50%;
-			}
-
-		/* Header */
-
-			#header > .container {
-				padding: 12em 0 5em 0;
-			}
-
-			#header h1 {
-				font-size: 2.5em;
-			}
-
-		/* Nav */
-
-			#nav > ul > li {
-				padding-right: 1.25em;
-			}
-
-		/* Features */
-
-			#features {
-				padding: 4em 0;
-			}
-
-		/* Banner */
-
-			#banner {
-				padding: 8em 0;
-			}
-
-				#banner > .container {
-					padding: 0 4em;
-				}
-
-					#banner > .container br {
-						display: none;
-					}
-
-		/* Main */
-
-			#main {
-				padding: 4em 0;
-			}
-
-		/* Footer */
-
-			#footer {
-				padding: 4em 0;
-			}
-
-		/* Copyright */
-
-			#copyright {
-				margin-top: 2em;
-				padding-top: 2em;
-			}
-
-	}
 
 /* Medium */
 
@@ -1868,7 +1788,7 @@ body {
 		display: none;
 	}
 
-	@media screen and (max-width: 980px) {
+	@media screen and (max-width: 1220px) {
 
 		/* Basic */
 
@@ -2221,17 +2141,6 @@ body {
 					margin-bottom: 0;
 				}
 
-		/* Copyright */
 
-			#copyright .links {
-				margin-bottom: 0;
-			}
-
-				#copyright .links li {
-					display: block;
-					padding-left: 0;
-					margin-left: 0;
-					border-left: 0;
-				}
 
 	}
