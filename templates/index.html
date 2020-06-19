@@ -33,9 +33,65 @@
 
 
   <div class="container" style="font-family: 'Antic Slab';">
-    <img src="{{ url_for('static', filename ='pics/logo.jpeg') }}" alt="logo" style="display: block; margin-left: auto; margin-right: auto; padding-bottom: 0;">
-    <h1 class="big-header" style="text-align: center; font-size: 500%; color: #505154;">Welcome to <span style="color: #ed786a;">the BLM HUB</span></h1>
-    <h1 style="text-align: center; color: #777a7e;">Need Assistance?</h1>
+    <img src="{{ url_for('static', filename ='pics/logo.jpeg') }}" alt="logo" style="display: block; margin-left: auto; margin-right: auto; padding-bottom: 0; max-width: 20%">
+    <h1 class="big-header" style="text-align: center; font-size: 400%; color: #505154;">Welcome to <span style="color: #ed786a;">the BLM HUB</span></h1>
+
+    <div class="container" style="padding-bottom: 10em;">
+
+                        <header>
+                            <h2 style="color: #777a7e"><span style="color: #ed786a">the BLM HUB</span> works to connect those affected by the protests with volunteers who
+                                can provide support. We also aim to battle inaction by providing a personalized
+                                compilation of action items for everyone.</h2>
+                            <div id="outer" style="text-align: center;">
+                                            <div class="inner"><a id="help_button" target="_blank" href="#help_form">
+                                        <button class="button" style="vertical-align:middle; font-size: 175%;"><span>I NEED HELP</span></button>
+                                        </a></div></div>
+                        </header>
+
+						<div class="row aln-center">
+							<div class="col-4 col-6-medium col-12-small">
+
+								<!-- Feature -->
+									<section>
+										<a href="#" class="image featured"><img style="max-width:100%; max-height: 200%" src="{{ url_for('static', filename ='pics/Volunteer.jpg') }}" alt="" /></a>
+										<div id="outer" style="text-align: center;">
+                                            <div class="inner"><a target="_blank" href="{{ url_for('volunteer') }}">
+                                        <button class="button" style="vertical-align:middle; text-align: center; background-color: #777a7e"><span>VOLUNTEER</span></button>
+                                        </a></div></div>
+										<p>Sign up to provide assistance to those affected by the protests.</p>
+									</section>
+
+							</div>
+							<div class="col-4 col-6-medium col-12-small">
+
+								<!-- Feature -->
+									<section>
+										<a href="#" class="image featured"><img style="max-width:100%; max-height: 200%" src="{{ url_for('static', filename ='pics/Protest.jpg') }}" alt="" /></a>
+										<div id="outer" style="text-align: center;">
+                                            <div class="inner"><a target="_blank" href="{{ url_for('protest') }}">
+                                        <button class="button" style="vertical-align:middle; text-align: center; background-color: #777a7e"><span>PROTEST</span></button>
+                                        </a></div></div>
+										<p>Find maps of protests. Make sure to be safe and prioritize your health.</p>
+									</section>
+
+							</div>
+							<div class="col-4 col-6-medium col-12-small">
+
+								<!-- Feature -->
+									<section>
+										<a href="#" class="image featured"><img style="max-width:100%; max-height: 200%" src="{{ url_for('static', filename ='pics/Donate.jpg') }}" alt="" /></a>
+										<div id="outer" style="text-align: center;">
+                                            <div class="inner"><a target="_blank" href="{{ url_for('resources') }}">
+                                        <button class="button" style="vertical-align:middle; text-align: center; background-color: #777a7e"><span>DONATE</span></button>
+                                        </a></div></div>
+										<p>Donate to bail funds, black businesses, and organizations committed to black success.</p>
+                                    </section>
+
+							</div>
+						</div>
+					</div>
+
+    <h1 id="help_form" style="text-align: center; color: #777a7e;">Need Assistance?</h1>
     <p style="text-align: center;">Fill out the form to be matched with volunteers in your area that can provide the assistance you need.</p>
     <form action="/" style="font-family: 'Antic Slab';" method="POST">
 
