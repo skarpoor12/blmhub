@@ -33,35 +33,46 @@
           </header>
       </div>
 
-                            <div class = "container" style="padding-bottom: 2em; text-align: center;">
-                                <h2 style="color: #32322F;">Filter Results</h2>
-                                <ul class="divided" style="list-style-type: none;">
-                                  <li>
-                                    <!-- Excerpt -->
-                                      <article class="box excerpt">
-                                        <form method="POST" action="/resources/">
-                                          <label>
-                                          <input style="vertical-align: middle;" type="checkbox" value="Support Black Organizations" name="filters">Support Black Organizations</label>
-                                          <label>
-                                          <input style="vertical-align: middle;" type="checkbox" value="Bail Funds" name="filters">Bail Funds</label>
-                                          <label>
-                                          <input style="vertical-align: middle;" type="checkbox" value="Petitions" name="filters">Petitions</label>
-                                          <label>
-                                          <input style="vertical-align: middle;" type="checkbox" value = "Organizations" name="filters">
-                                          Organizations</label>
-                                          <input style="font-family: 'Antic Slab';" type="submit">
-                                        </form>
-                                      </article>
+                            <div class = "container" style="padding-top: 2em;">
+                                <div class="row">
+							        <div class="col-6 col-12-medium">
+								    <section>
+                                        <h2 style="color: #32322F;">Filter Results</h2>
+                                        <ul class="divided" style="list-style-type: none; display: inline;">
+                                          <li>
+                                            <!-- Excerpt -->
+                                              <article class="box excerpt">
+                                                <form method="POST" action="/resources/">
+                                                  <label>
+                                                  <input style="vertical-align: middle;" type="checkbox" value="Support Black Organizations" name="filters">Support Black Organizations</label>
+                                                  <label>
+                                                  <input style="vertical-align: middle;" type="checkbox" value="Bail Funds" name="filters">Bail Funds</label>
+                                                  <label>
+                                                  <input style="vertical-align: middle;" type="checkbox" value="Petitions" name="filters">Petitions</label>
+                                                  <label>
+                                                  <input style="vertical-align: middle;" type="checkbox" value = "Organizations" name="filters">
+                                                  Organizations</label>
+                                                  <input style="font-family: 'Antic Slab';" type="submit">
+                                                </form>
+                                              </article>
 
-                                  </li>
+                                          </li>
+                                        </ul>
+                                    </section>
+                                    </div>
+							        <div class="col-6 col-12-medium">
+								        <section>
+                                            <a href="#" class="image featured"><img style="max-width:100%; max-height: 200%" src="{{ url_for('static', filename ='pics/Donate.jpg') }}" alt="" /></a>
+                                        </section>
+                                    </div>
+                                </div>
 
-                                </ul>
+                           <div style="position: relative; overflow: auto;">
+                                {% for table in tables %}
+                                          {{ table|safe }}
+                                {% endfor %}
+                           </div>
                             </div>
-           <div style="position: relative; overflow: auto;">
-                {% for table in tables %}
-                          {{ table|safe }}
-                {% endfor %}
-           </div>
   </div>
   <div>
     <p style="text-align: center"> Made Interactive with HTML5UP</p>
